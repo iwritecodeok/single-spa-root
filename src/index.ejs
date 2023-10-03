@@ -37,6 +37,15 @@
       "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
       "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
       "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+      }
+    }
+  </script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+
+  <!-- Add your organization's prod import map URL to this script's src  -->
+  <script type="systemjs-importmap" src="/importmap.json">
+    {
+      "imports": {
       "@shamazon/root-config": "https://single-spa-root.vercel.app//shamazon-root-config.js",
       "@shamazon/storefront": "https://storefront-mfe.vercel.app/shamazon-storefront.js",
       "@shamazon/navbar": "https://storefront-mfe-navbar.vercel.app/shamazon-navbar.js",
@@ -44,12 +53,8 @@
       }
     }
   </script>
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
 
-  <!-- Add your organization's prod import map URL to this script's src  -->
-  <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
-
-  <% if (isLocal) { %>
+  <!-- <% if (isLocal) { %>
   <script type="systemjs-importmap">
     {
       "imports": {
@@ -57,11 +62,11 @@
         "@shamazon/root-config": "//localhost:9000/shamazon-root-config.js",
         "@shamazon/navbar": "https://storefront-mfe-navbar.vercel.app/shamazon-navbar.js",
         "@shamazon/storefront": "//localhost:8081/shamazon-storefront.js",
-        "@shamazon/footer": "//localhost:4201/main.js"
+        "@shamazon/footer": "//localhost:4201/main.js",
       }
     }
   </script>
-  <% } %>
+  <% } %> -->
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
