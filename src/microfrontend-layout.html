@@ -1,0 +1,24 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  -->
+  <nav>
+    <application name="@shamazon/navbar"></application>
+  </nav>
+  <main>  
+    <route default>
+      <application name="@shamazon/storefront"></application>
+    </route>
+  </main>
+  <footer>
+    <application name="@shamazon/footer"></application>
+  </footer>
+  
+</single-spa-router>
